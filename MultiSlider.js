@@ -414,7 +414,7 @@ export default class MultiSlider extends React.Component {
                 <Marker
                   enabled={this.props.enabledOne}
                   pressed={this.state.onePressed}
-                  markerStyle={[styles.marker, this.props.markerStyle]}
+                  markerStyle={[styles.marker, this.props.markerStyle, this.props.markerLeftStyle]}
                   pressedMarkerStyle={this.props.pressedMarkerStyle}
                   currentValue={this.state.valueOne}
                   valuePrefix={this.props.valuePrefix}
@@ -424,7 +424,7 @@ export default class MultiSlider extends React.Component {
                 <MarkerLeft
                   enabled={this.props.enabledOne}
                   pressed={this.state.onePressed}
-                  markerStyle={[styles.marker, this.props.markerStyle]}
+                  markerStyle={[styles.marker, this.props.markerStyle, this.props.markerLeftStyle]}
                   pressedMarkerStyle={this.props.pressedMarkerStyle}
                   currentValue={this.state.valueOne}
                   valuePrefix={this.props.valuePrefix}
@@ -450,7 +450,7 @@ export default class MultiSlider extends React.Component {
                   {isMarkersSeparated === false ? (
                     <Marker
                       pressed={this.state.twoPressed}
-                      markerStyle={this.props.markerStyle}
+                      markerStyle={[this.props.markerStyle, this.props.markerRightStyle]}
                       pressedMarkerStyle={this.props.pressedMarkerStyle}
                       currentValue={this.state.valueTwo}
                       enabled={this.props.enabledTwo}
@@ -460,7 +460,7 @@ export default class MultiSlider extends React.Component {
                   ) : (
                     <MarkerRight
                       pressed={this.state.twoPressed}
-                      markerStyle={this.props.markerStyle}
+                      markerStyle={[this.props.markerStyle, this.props.markerRightStyle]}
                       pressedMarkerStyle={this.props.pressedMarkerStyle}
                       currentValue={this.state.valueTwo}
                       enabled={this.props.enabledTwo}
