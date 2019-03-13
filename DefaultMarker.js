@@ -4,7 +4,7 @@ import { View, StyleSheet, Platform, TouchableHighlight } from 'react-native';
 class DefaultMarker extends React.Component {
   render() {
     return (
-      <TouchableHighlight>
+      <TouchableHighlight style={styles.touchable}>
         <View
           style={
             this.props.enabled
@@ -60,6 +60,10 @@ const styles = StyleSheet.create({
   },
   disabled: {
     backgroundColor: '#d3d3d3',
+  },
+  touchable: {
+    height: '100%',
+    justifyContent: 'center'
   },
 });
 
